@@ -16,8 +16,8 @@ class Postmark {
 
 	public function __construct()
 	{
-		$this->api_key = Config::get('monitor::email.api_key');
-		$this->data['From'] = Config::get('monitor::email.from');
+		$this->api_key = \Config::get('monitor::email.api_key');
+		$this->data['From'] = \Config::get('monitor::email.from');
 	}
 
 	public function send()
