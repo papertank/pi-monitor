@@ -1,4 +1,4 @@
-<?php
+<?php namespace Monitor\Libraries;
 /**
  * A Laravel bundle for Postmark.
  *

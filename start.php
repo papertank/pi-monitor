@@ -21,7 +21,7 @@ Event::listen('monitor.server_down', function($report){
 	$subject = "DOWN Alert: $report->location is offline";
 	$message = $subject."\n $report->location is offline at $now";
 
-	$postmark = new Postmark();
+	$postmark = new Monitor\Libraries\Postmark();
     $postmark->to(Config::get('monitor::email.to'));
     $postmark->from_name('Server Alerting');
     $postmark->subject($subject);
@@ -48,7 +48,7 @@ Event::listen('monitor.server_up', function($report){
 	$subject = "UP Alert: $report->location is online";
 	$message = $subject."\n $report->location is online at $now";
 
-	$postmark = new Postmark();
+	$postmark = new Monitor\Libraries\Postmark();
     $postmark->to(Config::get('monitor::email.to'));
     $postmark->from_name('Server Alerting');
     $postmark->subject($subject);
