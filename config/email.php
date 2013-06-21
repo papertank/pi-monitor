@@ -6,4 +6,8 @@ return array(
 
 	'to' => 'alerts@example.com',
 
+	'api_key' => '',
+
+	'send' => true,
+
 );
